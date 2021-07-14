@@ -1,0 +1,11 @@
+name: 'tehuelche-pr-size-labeler'
+description: 'Label a PR based on the amount of changes'
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.GITHUB_TOKEN }}
